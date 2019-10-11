@@ -1,0 +1,921 @@
+<!DOCTYPE html> 
+<html> 
+<head><title>Numerical Methods for Hyperbolic Problems 2019</title> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<link rel="stylesheet" type="text/css" href="boletin23.css" /> 
+<script type="text/javascript" 
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" 
+></script> 
+<style type="text/css"> 
+.MathJax_MathML {text-indent: 0;} 
+</style> 
+</head><body 
+>
+   <!--l. 27--><div class="crosslinks"><p class="noindent"><span 
+class="ecrm-0900">[</span><a 
+href="#tail"><span 
+class="ecrm-0900">tail</span></a><span 
+class="ecrm-0900">] [</span><a 
+href="# "  ><span 
+class="ecrm-0900">up</span></a><span 
+class="ecrm-0900">] </span></p></div>
+   <h3 class="sectionHead"><span class="titlemark"><span 
+class="ecrm-0900">3.   </span></span> <a 
+ id="x6-200003"></a><span 
+class="ecrm-0900">Numerical Methods for Hyperbolic Problems 2019</span></h3>
+<div class="center" 
+>
+<!--l. 32--><p class="noindent" >
+</p><!--l. 34--><p class="noindent" ><span 
+class="ecbx-1440">NumHyp 2019, 17-21 junio 2019, M</span><span 
+class="ecbx-1440">á</span><span 
+class="ecbx-1440">laga</span><br />
+<span 
+class="ecbx-1200">Mar</span><span 
+class="ecbx-1200">í</span><span 
+class="ecbx-1200">a Luz Mu</span><span 
+class="ecbx-1200">ñ</span><span 
+class="ecbx-1200">oz Ruiz, Carlos Par</span><span 
+class="ecbx-1200">é</span><span 
+class="ecbx-1200">s Madro</span><span 
+class="ecbx-1200">ñ</span><span 
+class="ecbx-1200">al</span><br />
+<span 
+class="ecrm-1200">Universidad de M</span><span 
+class="ecrm-1200">á</span><span 
+class="ecrm-1200">laga</span><br />
+_____________</p></div>
+<!--l. 41--><p class="noindent" ><span 
+class="ecrm-0900">La sexta edici</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n del congreso internacional Numerical Methods for Hyperbolic Problems (NumHyp</span>
+<span 
+class="ecrm-0900">2019) tuvo lugar en el Instituto de Estudios Portuarios de M</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">laga entre los d</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">as 17 y 21 de junio de</span>
+<span 
+class="ecrm-0900">2019. Este congreso ha sido una de las actividades sat</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">lites del ICIAM2019, celebrado en Valencia del</span>
+<span 
+class="ecrm-0900">15 al 19 de Julio de 2019 (</span><a 
+href="https://iciam2019.org/" class="url" ><span 
+class="ectt-0900">https://iciam2019.org/</span></a><span 
+class="ecrm-0900">) del que M</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">laga era subsede. Asimismo, NumHyp</span>
+<span 
+class="ecrm-0900">2019 es tambi</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">n una actividad de la red ITN Modelling and Computation of Shocks and</span>
+<span 
+class="ecrm-0900">Interfaces (ModCompShock) ﬁnanciada por la UE, del que la Universidad de M</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">laga es nodo</span>
+<span 
+class="ecrm-0900">(</span><a 
+href="http://modcompshock.eu/" class="url" ><span 
+class="ectt-0900">http://modcompshock.eu/</span></a><span 
+class="ecrm-0900">).</span>
+</p><!--l. 44--><p class="indent" >   <span 
+class="ecrm-0900">Los congresos de la serie NumHyp se celebran con car</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">cter bienal desde el a</span><span 
+class="ecrm-0900">ñ</span><span 
+class="ecrm-0900">o 2009, en que tuvo</span>
+<span 
+class="ecrm-0900">lugar el primero de ellos en el Centro Internacional de Estudios Matem</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">ticos de Castro</span>
+<span 
+class="ecrm-0900">Urdiales. La organizaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de ese primer congreso corri</span><span 
+class="ecrm-0900">ó</span> <span 
+class="ecrm-0900">a cargo de los profesores de la</span>
+<span 
+class="ecrm-0900">UMA Carlos M. Par</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">s Madro</span><span 
+class="ecrm-0900">ñ</span><span 
+class="ecrm-0900">al y Manuel J. Castro D</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">az, en colaboraci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n con los</span>
+<span 
+class="ecrm-0900">profesores Christophe Berthon y Denise Aregba-Driollet de la Universidad de Burdeos.</span>
+<span 
+class="ecrm-0900">A aquella primera edici</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de estos encuentros le sucedieron otras en Roscoﬀ (Francia)</span>
+<span 
+class="ecrm-0900">en</span><span 
+class="ecrm-0900"> 2011, Aachen (Alemania) en 2013, Cortona (Italia) en 2015 y Monte Verit</span><span 
+class="ecrm-0900">à</span> <span 
+class="ecrm-0900">(Suiza)</span>
+<span 
+class="ecrm-0900">en</span><span 
+class="ecrm-0900"> 2017.</span>
+</p><!--l. 46--><p class="indent" >   <span 
+class="ecrm-0900">Estos congresos centran su inter</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">s en la presentaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de los </span><span 
+class="ecrm-0900">ú</span><span 
+class="ecrm-0900">ltimos avances y las nuevas</span>
+<span 
+class="ecrm-0900">tendencias en el dise</span><span 
+class="ecrm-0900">ñ</span><span 
+class="ecrm-0900">o de m</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">todos num</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">ricos espec</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">ﬁcos para los sistemas de ecuaciones en</span>
+<span 
+class="ecrm-0900">derivadas parciales (EDP) de tipo hiperb</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">lico. Estas EDP surgen en la modelizaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de un gran</span>
+<span 
+class="ecrm-0900">n</span><span 
+class="ecrm-0900">ú</span><span 
+class="ecrm-0900">mero de fen</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">menos de la ingenier</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">a, la f</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">sica y otras ciencias. En particular, muchos modelos</span>
+<span 
+class="ecrm-0900">matem</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">ticos de la mec</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">nica de ﬂuidos se expresan como EDP hiperb</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">licas: es el caso de las</span>
+<span 
+class="ecrm-0900">ecuaciones de Euler de la din</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">mica de gases, las ecuaciones de aguas poco profundas (shallow</span>
+<span 
+class="ecrm-0900">water), las de la magneto-hidrodin</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">mica, los modelos de ﬂuidos multif</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">sicos, etc. Ejemplos</span>
+<span 
+class="ecrm-0900">de </span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">reas de aplicaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n son la aerodin</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">mica, la oceanograf</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">a, la f</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">sica de plasmas,</span>
+<span 
+class="ecrm-0900">etc.</span>
+</p><!--l. 48--><p class="indent" >   <span 
+class="ecrm-0900">Las ecuaciones hiperb</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">licas han sido objeto de numerosos estudios tanto te</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">ricos como</span>
+<span 
+class="ecrm-0900">num</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">ricos a lo largo de las </span><span 
+class="ecrm-0900">ú</span><span 
+class="ecrm-0900">ltimas d</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">cadas. Es bien sabido que sus soluciones pueden presentar</span>
+<span 
+class="ecrm-0900">comportamientos muy complejos, que incluyen la presencia de singularidades como las ondas de</span>
+<span 
+class="ecrm-0900">choque, la fuerte dependencia de las condiciones iniciales, la presencia de m</span><span 
+class="ecrm-0900">ú</span><span 
+class="ecrm-0900">ltiples escalas</span>
+<span 
+class="ecrm-0900">espacio-temporales, la aparici</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de reg</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">menes turbulentos</span><span 
+class="ecrm-0900">…El dise</span><span 
+class="ecrm-0900">ñ</span><span 
+class="ecrm-0900">o y el an</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">lisis de m</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">todos</span>
+<span 
+class="ecrm-0900">num</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">ricos con buenas propiedades para resolverlas supone a</span><span 
+class="ecrm-0900">ú</span><span 
+class="ecrm-0900">n un desaf</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">o para la comunidad</span>
+<span 
+class="ecrm-0900">cient</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">ﬁca.</span>
+                                                                          
+
+                                                                          
+</p><!--l. 50--><p class="indent" >   <span 
+class="ecrm-0900">El objetivo de esta edici</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n era, pues, el de reunir a investigadores internacionales que</span>
+<span 
+class="ecrm-0900">trabajan en este campo para que presentasen sus avances m</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">s recientes y se favoreciese la</span>
+<span 
+class="ecrm-0900">discusi</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n y el intercambio de ideas en frentes de investigaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n muy activos, como son los</span>
+<span 
+class="ecrm-0900">siguientes:</span>
+</p>
+   <div class="columns-2">
+   _ <span 
+class="ecrm-0900">M</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">todos bien equilibrados</span>
+   _ <span 
+class="ecrm-0900">M</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">todos de alto orden</span>
+   _ <span 
+class="ecrm-0900">Cuantiﬁcaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de incertidumbres</span>
+   _ <span 
+class="ecrm-0900">Modelos para medios dispersivos</span>
+   _ <span 
+class="ecrm-0900">Soluciones </span><span 
+class="ecti-0900">measure valued </span><span 
+class="ecrm-0900">y </span><span 
+class="ecti-0900">estad</span><span 
+class="ecti-0900">í</span><span 
+class="ecti-0900">sticas</span>
+   _ <span 
+class="ecrm-0900">Modelos estoc</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">sticos</span>
+   _ <span 
+class="ecrm-0900">Ecuaciones cin</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">ticas</span>
+   _ <span 
+class="ecrm-0900">M</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">todos </span><span 
+class="ecti-0900">assymptotic preserving</span>
+   _ <span 
+class="ecrm-0900">Aplicaciones en geof</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">sica, astrof</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">sica, etc.</span>
+   </div>
+                                                                          
+
+                                                                          
+   <div class="wrapfig-r"><img 
+src="./CPares-NumHyp/20190617_apertura2.jpg" alt="PIC"  
+ /> <a 
+ id="x6-20001r23"></a>
+<a 
+ id="x6-20002"></a>
+<br />   <div class="caption" 
+><span class="id">Figura 23:  </span><span  
+class="content"><span 
+class="ecrm-0800">Sesi</span><span 
+class="ecrm-0800">ó</span><span 
+class="ecrm-0800">n  de  apertura  del  congreso  durante  la</span>
+<span 
+class="ecrm-0800">intervenci</span><span 
+class="ecrm-0800">ó</span><span 
+class="ecrm-0800">n de Carlos Par</span><span 
+class="ecrm-0800">é</span><span 
+class="ecrm-0800">s. Foto del Comit</span><span 
+class="ecrm-0800">é</span> <span 
+class="ecrm-0800">Organizador</span></span></div><!--tex4ht:label?: x6-20001r3 -->      </div>
+<!--l. 74--><p class="indent" >   <span 
+class="ecrm-0900">Para asegurar la consecuci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de los objetivos de esta reuni</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n se ha contado con un Comit</span><span 
+class="ecrm-0900">é</span>
+<span 
+class="ecrm-0900">Cient</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">ﬁco de primer nivel, compuesto por los profesores Emmanuel Audusse (U.</span><span 
+class="ecrm-0900"> Paris XII,</span>
+<span 
+class="ecrm-0900">Francia), Christophe Berthon (U. Nantes, Francia), M</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">ria Luk</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">cov</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">-Medvidov</span><span 
+class="ecrm-0900">á</span> <span 
+class="ecrm-0900">(Johannes</span>
+<span 
+class="ecrm-0900">Gutenberg U. Mainz, Alemania), Charalambos Makridakis (U. Crete, Grecia), Siddartha Mishra</span>
+<span 
+class="ecrm-0900">(ETH Zurich, Suiza), Pep Mulet (U. Valencia, Espa</span><span 
+class="ecrm-0900">ñ</span><span 
+class="ecrm-0900">a), Sebastian Noelle (RWTH Aachen,</span>
+<span 
+class="ecrm-0900">Alemania), Carlos Par</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">s (U. M</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">laga, Espa</span><span 
+class="ecrm-0900">ñ</span><span 
+class="ecrm-0900">a), Gabriella Puppo (U.</span><span 
+class="ecrm-0900"> Insubria Como,</span>
+<span 
+class="ecrm-0900">Italia), Giovanni Russo (U. Catania, Italia). El Comit</span><span 
+class="ecrm-0900">é</span> <span 
+class="ecrm-0900">Cient</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">ﬁco cerr</span><span 
+class="ecrm-0900">ó</span> <span 
+class="ecrm-0900">una lista de</span>
+<span 
+class="ecrm-0900">conferenciantes invitados de prestigio internacional reconocido en una o varias de las materias</span>
+<span 
+class="ecrm-0900">anteriores. El Comit</span><span 
+class="ecrm-0900">é</span> <span 
+class="ecrm-0900">Organizador Local ha estado integrado por los miembros del Grupo</span>
+<span 
+class="ecrm-0900">EDANYA de la Universidad de M</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">laga (</span><a 
+href="https://www.uma.es/edanya/" class="url" ><span 
+class="ectt-0900">https://www.uma.es/edanya/</span></a><span 
+class="ecrm-0900">), dirigido por el profesor</span>
+<span 
+class="ecrm-0900">Carlos Par</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">s Madro</span><span 
+class="ecrm-0900">ñ</span><span 
+class="ecrm-0900">al, quien ha actuado como Presidente de dicho Comit</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">. La p</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">gina web</span>
+<a 
+href="http://eventos.uma.es/go/NumHyp19" class="url" ><span 
+class="ectt-0900">http://eventos.uma.es/go/NumHyp19</span></a> <span 
+class="ecrm-0900">recoge toda la informaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n sobre el congreso y el lugar de</span>
+<span 
+class="ecrm-0900">celebraci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n.</span>
+</p><!--l. 82--><p class="indent" >   <span 
+class="ecrm-0900">En el transcurso del congreso se presentaron 10 conferencias invitadas, 30 comunicaciones orales y</span>
+<span 
+class="ecrm-0900">14 p</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">steres, destacando el excelente nivel cient</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">ﬁco y el elevado n</span><span 
+class="ecrm-0900">ú</span><span 
+class="ecrm-0900">mero de j</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">venes</span>
+<span 
+class="ecrm-0900">investigadores entre los autores. Se promovi</span><span 
+class="ecrm-0900">ó</span> <span 
+class="ecrm-0900">la participaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de </span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">stos mediante una serie de</span>
+<span 
+class="ecrm-0900">becas que cubr</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">an la inscripci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n al evento (que inclu</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">a la participaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n en el mismo y</span>
+<span 
+class="ecrm-0900">documentaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n asociada, las pausas-caf</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">, comidas y actos sociales). En total, se cont</span><span 
+class="ecrm-0900">ó</span> <span 
+class="ecrm-0900">con</span>
+<span 
+class="ecrm-0900">participantes procedentes de 12 pa</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">ses distintos. A lo largo de la semana, cada ma</span><span 
+class="ecrm-0900">ñ</span><span 
+class="ecrm-0900">ana</span>
+<span 
+class="ecrm-0900">comenzaba con dos conferencias invitadas de una hora de duraci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n, separadas entre s</span><span 
+class="ecrm-0900">í</span>
+<span 
+class="ecrm-0900">por la pausa caf</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">. A continuaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n, se expon</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">an tres comunicaciones orales, de veinte</span>
+<span 
+class="ecrm-0900">minutos cada una de ellas, salvo el mi</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">rcoles, en que ese tiempo se dedic</span><span 
+class="ecrm-0900">ó</span> <span 
+class="ecrm-0900">a que todos los</span>
+<span 
+class="ecrm-0900">autores de p</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">ster que lo deseasen hiciesen una breve presentaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de no m</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">s de cinco</span>
+<span 
+class="ecrm-0900">minutos de su trabajo. En la sesi</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de tarde de lunes, martes y jueves se presentaron</span>
+<span 
+class="ecrm-0900">seis comunicaciones orales de veinte minutos de duraci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n. El mi</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">rcoles por la tarde se</span>
+<span 
+class="ecrm-0900">ofreci</span><span 
+class="ecrm-0900">ó</span> <span 
+class="ecrm-0900">a los participantes una visita guiada a la ciudad, tras la cual tuvo lugar la cena</span>
+<span 
+class="ecrm-0900">de gala del congreso. La sesi</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de clausura tuvo lugar el viernes a primera hora de la</span>
+<span 
+class="ecrm-0900">tarde.</span>
+</p><!--l. 86--><p class="indent" >   <span 
+class="ecrm-0900">Los resultados del congreso aparecer</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">n en un volumen de la serie SEMA SIMAI de Springer</span>
+<a 
+href="https://www.springer.com/series/10532" class="url" ><span 
+class="ectt-0900">https://www.springer.com/series/10532</span></a> <span 
+class="ecrm-0900">del que los editores ser</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">n los profesores Carlos Par</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">s</span>
+<span 
+class="ecrm-0900">Madro</span><span 
+class="ecrm-0900">ñ</span><span 
+class="ecrm-0900">al, Manuel J. Castro D</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">az y Mar</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">a Luz Mu</span><span 
+class="ecrm-0900">ñ</span><span 
+class="ecrm-0900">oz Ruiz.</span>
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                          
+
+                                                                          
+                                                                          
+
+                                                                          
+<!--l. 94--><p class="noindent" ><img 
+src="./CPares-NumHyp/NumHyp2019_cartel_A3b.jpg" alt="PIC"  
+ /> <a 
+ id="x6-20003r24"></a>
+<a 
+ id="x6-20004"></a>
+<br /> </p><div class="caption" 
+><span class="id">Figura 24: </span><span  
+class="content"><span 
+class="ecrm-0800">Cartel anunciador del congreso. Fuente: Comit</span><span 
+class="ecrm-0800">é</span> <span 
+class="ecrm-0800">Organizador</span></span></div><!--tex4ht:label?: x6-20003r3 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfigure" />
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-0900">3.1.   </span></span> <a 
+ id="x6-210003.1"></a><span 
+class="ecrm-0900">Conferenciantes plenarios</span></h4>
+<!--l. 109--><p class="noindent" ><span 
+class="ecrm-0900">Los diez conferenciantes invitados seleccionados por el Comit</span><span 
+class="ecrm-0900">é</span> <span 
+class="ecrm-0900">Cient</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">ﬁco y el t</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">tulo de sus</span>
+<span 
+class="ecrm-0900">contribuciones son los siguientes:</span>
+</p>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="ecrm-1200">Jos</span><span 
+class="ecrm-1200">é</span> <span 
+class="ecrm-1200">Antonio Carrillo (Imperial College, Reino Unido). </span><br 
+class="newline" /><span 
+class="ecti-1200">Well-balanced ﬁnite volume schemes for hydrodynamic equations with</span>
+     <span 
+class="ecti-1200">general free energy and noise</span><span 
+class="ecrm-1200">.</span>
+     </li>
+     <li class="itemize"><span 
+class="ecrm-1200">St</span><span 
+class="ecrm-1200">é</span><span 
+class="ecrm-1200">phane Clain (U. Minho, Portugal). </span><br 
+class="newline" /><span 
+class="ecti-1200">Very high-order schemes with curved domains</span><span 
+class="ecrm-1200">.</span>
+     </li>
+     <li class="itemize"><span 
+class="ecrm-1200">Michael Dumbser (U. Trento, Italia). </span><br 
+class="newline" /><span 
+class="ecti-1200">New hyperbolic models and numerical algorithms for Newtonian and</span>
+     <span 
+class="ecti-1200">general relativistic continuum physics</span><span 
+class="ecrm-1200">.</span>
+     </li>
+     <li class="itemize"><span 
+class="ecrm-1200">Martin Frank (Karlsruhe Institute of Technology, Alemania). </span><br 
+class="newline" /><span 
+class="ecti-1200">Entropy-based  closures  for  uncertainty  quantiﬁcation  of  hyperbolic</span>
+     <span 
+class="ecti-1200">conservation laws</span><span 
+class="ecrm-1200">.</span>
+     </li>
+     <li class="itemize"><span 
+class="ecrm-1200">Jos</span><span 
+class="ecrm-1200">é</span> <span 
+class="ecrm-1200">Mar</span><span 
+class="ecrm-1200">í</span><span 
+class="ecrm-1200">a Gallardo (U. M</span><span 
+class="ecrm-1200">á</span><span 
+class="ecrm-1200">laga, Espa</span><span 
+class="ecrm-1200">ñ</span><span 
+class="ecrm-1200">a). </span><br 
+class="newline" /><span 
+class="ecti-1200">Incomplete Riemann solvers based on functional approximations to the</span>
+     <span 
+class="ecti-1200">absolute value function</span><span 
+class="ecrm-1200">.</span>
+     </li>
+     <li class="itemize"><span 
+class="ecrm-1200">Rapha</span><span 
+class="ecrm-1200">è</span><span 
+class="ecrm-1200">le Herbin (Universit</span><span 
+class="ecrm-1200">é</span> <span 
+class="ecrm-1200">d’Aix-Marseille, Francia). </span><br 
+class="newline" /><span 
+class="ecti-1200">On  some  stable  and  weakly  consistent  staggered  schemes  for  the</span>
+     <span 
+class="ecti-1200">compressible Euler equations</span><span 
+class="ecrm-1200">.</span>
+     </li>
+     <li class="itemize"><span 
+class="ecrm-1200">Hana Mizerov</span><span 
+class="ecrm-1200">á</span> <span 
+class="ecrm-1200">(Comenius U. Bratislava, Eslovaquia). </span><br 
+class="newline" /><span 
+class="ecti-1200">Convergence of a new ﬁnite volume scheme for the Euler equations of</span>
+     <span 
+class="ecti-1200">gas dynamics</span><span 
+class="ecrm-1200">.</span>
+     </li>
+     <li class="itemize"><span 
+class="ecrm-1200">Claus-Dieter Munz (U. Stuttgart, Alemania). </span><br 
+class="newline" /><span 
+class="ecti-1200">A sharp interface approach for compressible multiphase ﬂow</span><span 
+class="ecrm-1200">.</span>
+                                                                          
+
+                                                                          
+     </li>
+     <li class="itemize"><span 
+class="ecrm-1200">Deep Ray (</span><span 
+class="ecrm-1200">É</span><span 
+class="ecrm-1200">cole Polytechnique F</span><span 
+class="ecrm-1200">é</span><span 
+class="ecrm-1200">d</span><span 
+class="ecrm-1200">é</span><span 
+class="ecrm-1200">rale de Lausanne, Suiza). </span><br 
+class="newline" /><span 
+class="ecti-1200">Using Deep Learning to overcome algorithmic bottlenecks</span><span 
+class="ecrm-1200">.</span>
+     </li>
+     <li class="itemize"><span 
+class="ecrm-1200">Jacques Sainte-Marie (Inria &#x0026; Sorbonne Universit</span><span 
+class="ecrm-1200">é</span><span 
+class="ecrm-1200">, Francia). </span><br 
+class="newline" /><span 
+class="ecti-1200">Free surface ﬂows: from hydrostatic to non-hydrostatic models</span><span 
+class="ecrm-1200">.</span>
+     </li></ul>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                          
+
+                                                                          
+                                                                          
+
+                                                                          
+<!--l. 147--><p class="noindent" ><img 
+src="./CPares-NumHyp/20190618_M_Dumbser_1.jpg" alt="PIC"  
+ /><img 
+src="./CPares-NumHyp/20190619_JA_Carrillo_2.jpg" alt="PIC"  
+ />
+<img 
+src="./CPares-NumHyp/IMG_4188_Gallardo.jpg" alt="PIC"  
+ /><img 
+src="./CPares-NumHyp/irene.jpg" alt="PIC"  
+ />
+<a 
+ id="x6-21001r25"></a>
+<a 
+ id="x6-21002"></a>
+<br /> </p><div class="caption" 
+><span class="id">Figura 25: </span><span  
+class="content">Imágenes de las conferencias de Michael Dumbser, José Antonio Carrillo,
+José María Gallardo y de una de las comunicaciones del grupo EDANYA. Fotos del
+Comité Organizador.</span></div><!--tex4ht:label?: x6-21001r3 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfigure" />
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-0900">3.2.   </span></span> <a 
+ id="x6-220003.2"></a><span 
+class="ecrm-0900">Comunicaciones y p</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">steres</span></h4>
+<!--l. 158--><p class="noindent" ><span 
+class="ecrm-0900">Las comunicaciones y p</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">steres presentados abarcaron casi todos los aspectos de la tem</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">tica de los</span>
+<span 
+class="ecrm-0900">congresos NumHyp: el modelado estuvo presente en charlas como la de Alexander Kurganov, los</span>
+<span 
+class="ecrm-0900">esquemas </span><span 
+class="ecti-0900">assymptotic preserving </span><span 
+class="ecrm-0900">en algunas como la de Alina Chertock, los esquemas de alto orden en</span>
+<span 
+class="ecrm-0900">la de Matteo Semplice entre otros, los esquemas cin</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">ticos en la de Philippe Helluy, el an</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">lisis</span>
+<span 
+class="ecrm-0900">te</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">rico en otras como las de M</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">ria Luk</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">č</span><span 
+class="ecrm-0900">ov</span><span 
+class="ecrm-0900">á</span> <span 
+class="ecrm-0900">y Sebastian Noelle, la cuantiﬁcaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de la</span>
+<span 
+class="ecrm-0900">incertidumbre fue discutida, entre otros, por Giovanni Russo, no faltando otros aspectos como el de los</span>
+<span 
+class="ecrm-0900">m</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">todos bien equilibrados, que cont</span><span 
+class="ecrm-0900">ó</span> <span 
+class="ecrm-0900">con algunas presentaciones de miembros del grupo</span>
+<span 
+class="ecrm-0900">EDANYA.</span>
+</p><!--l. 160--><p class="indent" >   <span 
+class="ecrm-0900">La cantidad de participantes en el congreso, en torno a 80, y la buena disposici</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de todos ellos</span>
+<span 
+class="ecrm-0900">favorec</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">a el di</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">logo ﬂuido tras cada presentaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n, di</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">logo que se extend</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">a a las pausas para el</span>
+<span 
+class="ecrm-0900">caf</span><span 
+class="ecrm-0900">é</span> <span 
+class="ecrm-0900">y la comida, y por supuesto a la sesi</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de p</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">steres, colocados en una sala anexa a la de</span>
+<span 
+class="ecrm-0900">conferencias, que pod</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">a ser utilizada tambi</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">n por los participantes como lugar de trabajo y</span>
+<span 
+class="ecrm-0900">reuniones durante la realizaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n del encuentro.</span>
+</p><!--l. 169--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-0900">3.3.   </span></span> <a 
+ id="x6-230003.3"></a><span 
+class="ecrm-0900">Actos sociales</span></h4>
+<!--l. 171--><p class="noindent" ><span 
+class="ecrm-0900">La apertura del congreso tuvo lugar en la sala de conferencias del ediﬁcio del Instituto de</span>
+<span 
+class="ecrm-0900">Estudios Portuarios. El congreso fue inaugurado, en representaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n del Vicerrector de</span>
+<span 
+class="ecrm-0900">Investigaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n y Transferencia de la UMA, por D.</span><span 
+class="ecrm-0900"> Joaqu</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">n Ortega Casanova (Vicerrector Adjunto</span>
+<span 
+class="ecrm-0900">de Transferencia), al que acompa</span><span 
+class="ecrm-0900">ñ</span><span 
+class="ecrm-0900">a en la mesa presidencial el presidente del Comit</span><span 
+class="ecrm-0900">é</span>
+<span 
+class="ecrm-0900">Organizador.</span>
+</p><!--l. 173--><p class="indent" >   <span 
+class="ecrm-0900">Es de destacar que el emplazamiento de este ediﬁcio en el Puerto de M</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">laga es inmejorable, ya que</span>
+<span 
+class="ecrm-0900">se encuentra en la entrada principal del recinto, junto al ediﬁcio de la Autoridad Portuaria. La calle</span>
+<span 
+class="ecrm-0900">Larios, considerada la principal de la ciudad y por ende, del centro hist</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">rico, est</span><span 
+class="ecrm-0900">á</span> <span 
+class="ecrm-0900">unida a la entrada</span>
+<span 
+class="ecrm-0900">del puerto a trav</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">s de la plaza de la Marina. La </span><span 
+class="ecrm-0900">ú</span><span 
+class="ecrm-0900">ltima remodelaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n del Puerto de M</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">laga</span>
+<span 
+class="ecrm-0900">permite adem</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">s acceder f</span><span 
+class="ecrm-0900">á</span><span 
+class="ecrm-0900">cilmente desde el Instituto al Palmeral de las Sorpresas y a la zona de</span>
+<span 
+class="ecrm-0900">cultura y de ocio conocida como Muelle Uno.</span>
+</p><!--l. 175--><p class="indent" >   <span 
+class="ecrm-0900">El mi</span><span 
+class="ecrm-0900">é</span><span 
+class="ecrm-0900">rcoles se realiz</span><span 
+class="ecrm-0900">ó</span> <span 
+class="ecrm-0900">una visita guiada al centro de la ciudad, que discurri</span><span 
+class="ecrm-0900">ó</span> <span 
+class="ecrm-0900">por el coraz</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de</span>
+<span 
+class="ecrm-0900">la misma, donde se encuentran situados, entre otros monumentos, la catedral, el museo episcopal, la</span>
+<span 
+class="ecrm-0900">casa natal de Picasso, los museos Carmen Thyssen y Picasso, el Teatro Romano, la Alcazaba, el castillo</span>
+<span 
+class="ecrm-0900">de Gibralfaro, etc. Esta visita culmin</span><span 
+class="ecrm-0900">ó</span> <span 
+class="ecrm-0900">con una cena en la muy t</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">pica y concurrida Bodega El Pimpi,</span>
+<span 
+class="ecrm-0900">situada en la antigua juder</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">a, junto al museo Picasso y con vistas al Teatro Romano y la</span>
+<span 
+class="ecrm-0900">Alcazaba.</span>
+</p><!--l. 177--><p class="indent" >   <span 
+class="ecrm-0900">El </span><span 
+class="ecrm-0900">ú</span><span 
+class="ecrm-0900">ltimo d</span><span 
+class="ecrm-0900">í</span><span 
+class="ecrm-0900">a del encuentro, en la sesi</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n de clausura, se anunci</span><span 
+class="ecrm-0900">ó</span> <span 
+class="ecrm-0900">que la pr</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">xima edici</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n</span>
+<span 
+class="ecrm-0900">tendr</span><span 
+class="ecrm-0900">á</span> <span 
+class="ecrm-0900">lugar en Italia en 2021, en una localizaci</span><span 
+class="ecrm-0900">ó</span><span 
+class="ecrm-0900">n a</span><span 
+class="ecrm-0900">ú</span><span 
+class="ecrm-0900">n por conﬁrmar.</span>
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                          
+
+                                                                          
+                                                                          
+
+                                                                          
+<!--l. 181--><p class="noindent" ><img 
+src="./CPares-NumHyp/20190619_foto_grupo8b.jpg" alt="PIC"  
+ /> <a 
+ id="x6-23001r26"></a>
+<a 
+ id="x6-23002"></a>
+<br /> </p><div class="caption" 
+><span class="id">Figura 26: </span><span  
+class="content"><span 
+class="ecrm-0800">Foto de grupo del congreso. Foto del Comit</span><span 
+class="ecrm-0800">é</span> <span 
+class="ecrm-0800">Organizador</span></span></div><!--tex4ht:label?: x6-23001r3 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfigure" />
+<div class="center" 
+>
+<!--l. 185--><p class="noindent" >
+</p><!--l. 186--><p class="noindent" ><br />
+_____________________________________ <span 
+class="cmsy-10x-x-120">◇</span><span 
+class="cmsy-10x-x-207">◇</span><span 
+class="cmsy-10x-x-120">◇</span>_____________________<br />
+</p></div>
+<!--l. 1606--><p class="indent" >
+                                                                          
+
+                                                                          
+                                                                          
+
+                                                                          
+</p>
+   <!--l. 1608--><div class="crosslinks"><p class="noindent"><span 
+class="ecrm-0900">[</span><a 
+ ><span 
+class="ecrm-0900">front</span></a><span 
+class="ecrm-0900">] [</span><a 
+href="# "  ><span 
+class="ecrm-0900">up</span></a><span 
+class="ecrm-0900">] </span></p></div>
+<!--l. 1608--><p class="indent" >   <a 
+ id="tail"></a>  </p> 
+</body> 
+</html>

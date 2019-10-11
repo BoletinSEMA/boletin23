@@ -1,0 +1,350 @@
+\documentclass[twoside]{article}
+
+\usepackage[margin=4cm]{geometry}
+\usepackage{calligra}
+\usepackage[colorlinks, linkcolor=azulsema!60!black]{hyperref}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{eurosym}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{colortbl}
+\usepackage{float}
+
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{babel,calc,intersections,through,backgrounds,shadings,fadings}
+
+\definecolor{azulsema}{cmyk}{0.83, 0.3, 0.18, 0.11}
+\definecolor{azulcielo}{cmyk}{0.69, 0.42, 0.11, 0.03}
+
+\newcommand{\gills}[1]{«#1»} % {«»}
+
+\begin{document}
+\shorthandoff{>}\shorthandoff{<} %Necesario para compatibilizar los paquetes [spanish]{babel} 
+
+
+\section{ICIAM 2019}
+
+\subsection{Mis vivencias de un congreso extraordinario}
+
+\begin{center}\large
+\textbf{Sebastià Xambó Descamps}\\
+Universidad Politècnica de Catalunya \\
+{\color{azulsema}\rule{.5\linewidth}{1pt}}
+\end{center}
+
+\noindent
+La impresión general es que fue un gran éxito en todos los sentidos. 
+La gratitud hacia todas las personas e instituciones que lo hicieron posible es unánime.
+Este reconocimiento es ya superlativo para quienes pilotaron la nave de la organización 
+durante luengos tiempos, con sus múltiples rutas y escalas, hasta llevarla a buen puerto. 
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{IMG_1714-inauguration.jpg} % png is the composite image
+\vspace{-12pt}
+\caption{\footnotesize El Rey Felipe VI presidió el acto inaugural del Congreso ICIAM 2019 
+acompañado por el Ministro de Ciencia e Innovación, Pedro Duque, 
+el Presidente de la Generalitat Valenciana, Ximo Puig, 
+el Alcalde de Valencia, Joan Ribó, y la
+Presisenta de ICIAM, María Jesús Esteban (Directora del CNRS de Francia). 
+Felipe VI hizo entrega de los cinco premios ICIAM otorgados en el Congreso:
+Siddartha Mishra (Escuela Federal Politécnica de Zurich), Premio Kollatz a científicos de menos de 42 años; 
+George Papanicolaou (Universidad de Stanford), Premio Lagrange a contribuciones excepcionales a lo largo de una carrera; 
+Claude Bardos (Universidad Denis Diderot de París), Premio Maxwell a la originalidad en el campo de la matemática aplicada; 
+Yvon Maday (Universidad de la Sorbona), Premio Pionero al desarrollo de métodos matemáticos aplicados a un nuevo campo; 
+y Giulia di Nunno (Universidad de Oslo), Premio Su Buchin a la promoción de las matemáticas a países en vías de desarrollo.
+De izquierda a derecha: 
+Joan Ribó, Ximo Puig, 
+Yvon Maday,
+Giulia di Nunno, Felipe VI, 
+George Papanicolaou, 
+Claude Bardos, 
+Siddarta Mishra, María Jesús Esteban, Pedro Duque.
+Foto de SXD.}
+\end{figure}
+
+El lunes 15 por la tarde tuvo lugar la ceremonia de entrega de los premios SeMA. Joaquim Serra, 
+premio \gills{Antonio Valle}, no pudo asistir al acto y fue
+para mi un honor que me pidiera recoger el diploma en su nombre (Figura 2, izquierda). 
+Mi función terminó con la lectura de las palabras que me envió para
+la ocasión. Por su interés, las consigno a continuación:
+
+\begin{quotation}\small
+Es un gran honor y privilegio recibir el Premio SeMA \gills{Antonio Valle} al joven
+investigador.  Aunque no me ha sido posible venir personalmente a recoger el
+premio, quisiera hacer llegar mi profundo agradecimiento a la Sociedad Española
+de Matemática Aplicada y al jurado del premio por este reconocimiento.
+
+Con este premio recojo el fruto de muchas personas que han tenido un papel
+importante en mi formación.  Quisiera destacar singularmente a Josep Grané y a
+mi director de tesis, Xavier Cabré, ambos profesores de la Universitat
+Politècnica de Catalunya.  Les estoy muy agradecido por su importante
+implicación en mi formación al inicio de mi carrera y podría decirse que gran
+parte del premio de debe a ellos.
+
+Además, y como la investigación matemática es una actividad colaborativa,
+aprovecho la ocasión para agradecer también a todas las personas con las que he
+trabajado, escrito artículos, y discutido matemáticas.  He sido muy afortunado
+de poder colaborar y aprender de mucha gente extraordinaria. Además de Xavier
+Cabré, Alessio Figalli, Xavier Ros, Sylvia Serfaty, Luis Caffarelli; entre
+otros.
+
+Finalmente, quiero agradecer otra vez a la SeMA su dedicación y fomento de la
+investigación y la ciencia, y en particular sus esfuerzos por promover y
+estimular a los jovenes investigadores.  {Reconocimientos como este nos animan a
+continuar trabajando intensamente y nos dan confianza para perseguir objetivos
+cada vez mas ambiciosos}.
+\end{quotation}
+
+Joaquim Serra ha sido galardonado con el premio José Luis Rubio de Francia 2018.
+En la Figura 2, derecha, aparece en un istante de la mañana del 1 de agosto, en la jardín
+de la Facultat de Matemàtiques i Estadística de la UPC, junto con los miembros del equipo
+destacado por la FBBVA para entrevistarle y elaborar material fotográfico para
+la ceremonia de entrega del premio el próximo día 3 de octubre.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{IMG_1801-PremioAntonioValle.png}
+\vspace{-12pt}
+\caption{\footnotesize Joaquim Serra, Premio SeMA \gills{Antonio Valle} al joven investigador 2019. Fotos de SXD.}
+\end{figure}
+
+
+
+Aunque el autor de estas líneas ha sido miembro de la comisión promotora de ICIAM 2019 desde el principio, 
+no fue hasta la conferencia AGACSE 2018 (23-27 julio, Campinas, Brasil), 
+que ya había sido aceptada como satélite,%
+\footnote{\url{http://www.ime.unicamp.br/~agacse2018/}} 
+en que fue consciente de que el partido había empezado. Había ayudado en la organización de AGACSE 2018, 
+a raíz de haber organizado la conferencia previa, AGACSE 2015 (27-31 julio, Barcelona),%
+\footnote{\url{https://mat-web.upc.edu/people/sebastia.xambo/agacse2015/}} 
+y luego aceptó la invitación de presidir el Comité Científico. 
+
+En una charla con algunos participantes al final de AGACSE 2018, 
+y en particular con el responsable de la organización local, Carlile Lavor, que a la sazón había sido
+elegido para presidir la Sociedad Brasileña de Matemática Aplicada y Computacional,
+la idea de solicitar la organización de un minisimposio
+en ICIAM-2019 fue aceptada. El título que nos aglutinó, 
+\emph{Sistemas, patrones e ingeniería de datos con cálculos geométricos}, fue el que se propuso y el que fue aprobado.
+
+El minisimposio se celebró el martes 16 de julio con el programa que resume el Cuadro~\ref{tabla-ms}.
+%(p. \pageref{tabla-ms}).
+Es un buen momento para dar cuenta de la facilidad con que los coordinadores
+pudieron hacer su labor gracias al perfecto funcionamiento del sistema informático para acceder 
+sin demoras a los sucesivos archivos de presentación de los conferenciantes. 
+
+%\vspace{-12pt}
+
+\begin{table}[h]
+\caption{\small Programa del minisimposio \emph{Systems, Patterns and Data-Engineering with Geometric Calculi}.
+SX: Sebastià Xambó Descamps (Organizador, Catedrático Emérito de la UPC y Visitante del BSC); 
+IZ: Isiah Zaplana (Postdoc en el Istituto Italiano de Tecnologia, Advanced Robotics,
+y a partir de septiembre 2019
+en el Commonwealth Scientific and Industrial Research Organization de Brisbane, Australia);
+CL: Carlile Lavor (Catedrático de la Universidad de Campinas, miembro el Instituto de Matemática, Estadística e 
+Computação Científica de la misma, y Presidente de la Sociedad Brasileña de Matemática Aplicada);
+SV: Salvatore Vitabile (Scuola di Medicina e Chirurgia, Università degli Studi di Palermo);
+SL: Srdan Lazendic (Estudiante de doctorado del Clifford Research Group, Departamento de Análisis Matemático,
+Universidad de Ghent; galardonado con el premio David Hestenes en AGACSE 2018);
+UM: Eduardo Ulises Moya (Tras su estancia postdoctoral en el BSC, fue nombrado director de la Agencia 
+para la Inteligencia Artificial del Gobierno de Jalisco, México).
+\label{tabla-ms}}
+
+\medskip
+\qquad\begin{tabular}{|c|c|c|}
+\hline 
+11:00 & SX & \emph{Geomatric Calculus Techniques in Science and Engineering} \\ 
+\hline 
+11:30 & IZ & \emph{Bringing New Perspectives to Robotics and Computer Science} \\ 
+\hline 
+12:00 & CL & \emph{Geometric Algebra and Distance Geometry} \\ 
+\hline 
+12:30 & SV & \emph{Embedded Coprocessors for Native Execution of GA Operations} \\ 
+\hline
+\multicolumn{3}{|c|}{} \\ 
+\hline 
+14:30 & SL & \emph{Hypercomplex Algebras for Art Investigation} \\ 
+\hline 
+15:00 & SV & \emph{Conformal Geometric Algebra for Medical Imaging} \\ 
+\hline 
+15:30 & UM &  \emph{Geometric Bio-Inspired Deep Learning}\\ 
+\hline 
+16:00 & SX & \emph{Geometric Calculus Meets Deep Learning} \\ 
+\hline 
+\end{tabular} 
+\end{table}
+
+
+
+
+
+
+
+
+Dejo para el final los comentarios sobre el contenido y significación de este minisimposio
+para referir otro de los aspectos de ICIAM 2019 en los que pude aportar otro granito de arena.
+Se trata de los resúmenes para la NL del Congreso que coordinó Carlos Castro. Además de él, también
+contribuyeron María Paz Calvo, Julio Moro y Francisco Pla. Me fueron asignadas cinco conferencias,
+escogidas entre las que tenía previsto asistir,
+pero las circunstancias quisieron que solo pudieran publicarse las notas sobre las de Marsha \textbf{Berger},
+Kristin \textbf{Lauter} y Marcelo \textbf{Viana} (Figura 3), pero no las de Françoise \textbf{Tisseur} (Conferencia Olga Taussky-Todd)
+ni de Victor M. \textbf{Pérez-García} (Conferencia pública). A continuación consigno
+las traducciones al castellano de los resúmenes publicados y 
+a seguido comentaré las dos conferencias cuyos resúmenes no fueron publicados.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{3-plenary-lectures.png}
+\vspace{-12pt}
+\caption{\footnotesize Conferencias plenarias de Marsha Berger, 
+Kristin Lauter y Marcelo Viana. Fotos de SXD.}
+\end{figure}
+
+\noindent
+\textbf{Berger}.
+La conferencia plenaria de Marsha Berger (Courant Institute, NYU), con el título
+\gills{Progress in the Modelling of Asteroid-Generated Tsunamis}, fue impartida
+en el Aula Magna de la Facultad de Medicina (edificio ME) el miércoles 17
+de 09:30 a 10:15. Atrajo a muchos participantes que gozaron con las claras
+pantallas, el estilo y efectividad de su oratoria, y los sofisticados 
+modelos que presentó. Todos quedaron encantados con las simulaciones dinámicas que mostró 
+relativas a intrigantes casos reales.
+
+\smallskip
+\noindent
+\textbf{Lauter}.
+Sí, existe una solución práctica para garantizar la privacidad de nuestros datos
+en este nuestro mundo alojado en la nube. Este fue el principal titular de la intervención de 
+Kristin Lauter (Microsoft Research y University of Washington) en su conferencia plenaria 
+\gills{Inteligencia artificial privada} impartida 
+el jueves 18 de julio, de 11:00 a 11:45, en la Carpa de la Facultad de Actividad Física y Deportes.
+Adoptó la opinión pragmática de que la inteligencia artificial es el arte de hacer predicciones útiles 
+mediante algoritmos de aprendizaje automático y argumentó que las predicciones que involucran datos privados 
+pueden mantenerse privadas de forma segura mediante las versiones recientes de los esquemas criptográficos homomórficos.
+
+\smallskip           
+\noindent
+\textbf{Viana}. 
+Su papel fundamental en el análisis numérico es solo una de las muchas caras de la teoría de los exponentes de Lyapunov 
+que Marcelo Viana (IMPA, Río de Janeiro) examinó en su conferencia plenaria el viernes 19 (8:30 a 9:15) en el Saló d'Actes  de la 
+Facultad de Filología, Traducción y Comunicación (edificio FT). Mención especial merecen dos resultados profundos y sobresalientes 
+con Arthur Avila (Medalla Fields 2014) obtenidos en 2010: el \gills{principio de invariancia} 
+y el \gills{teorema estable de Bernoulli}. 
+Otro aspecto notable de la conferencia fue la formulación de muchos problemas abiertos.
+Jesús Sanz-Serna, presidente de la Real Academia de Ciencias Exactas, Físicas y Naturales, presidió la sesión. 
+Para los lectores que deseen saber más: M. Viana, Lectures on Lypunov exponents, Cambridge Studies in Advanced Mathematics, 145, 
+Cambridge University Press, 2014. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{IMG_1776-OlgaTaussky-lecture-TCh.png}
+\vspace{-12pt}
+\caption{\footnotesize Conferencia Olga Taussky-Todd. % de  (derecha). 
+Izquierda: Tomás Chacón y Françoise Tisseur. Derecha: Françoise Tisseur al principio de su conferencia.
+Fotos de SXD.\label{tisseur}}
+\end{figure}
+
+
+
+\smallskip           
+\noindent
+\textbf{Tisseur}.
+La primera conferencia plenaria fue la \gills{Olga Taussky-Todd Lecture}. La impartió
+Françoise Tisseur (School of Mathematics, University of Manchester) 
+en el \gills{Valencia Conference Center}, a las 12:30,
+después del descanso que siguió a los actos de inauguración, con el título
+\gills{Challenges in the numerical solution of nonlinear eigenvalue problems}
+(Figura \ref{tisseur}). 
+No apareció ningún resumen, ya que el lunes fue un día densísimo que no me dejó tiempo libre para 
+escribirlo antes del (temprano) cierre de la edición. Afortunadamente, las pantallas que presentó se pueden
+encontrar en \url{https://www.maths.manchester.ac.uk/~ftisseur/talks/FT_ICIAM19.pdf}.
+
+
+\smallskip           
+\noindent
+\textbf{Pérez-García}. El mensaje básico de su conferencia pública 
+(18 de julio, Palau de les Arts, 19:45)
+fue que los modelos matemáticos y los métodos computacionales
+son hoy indispensables en todos los frentes de la investigación bio-médica, y más particularmente en oncología.
+En su conferencia, titulada ?`Pueden las matemáticas ayudar en la lucha contra el cáncer?,
+intercaló intervenciones de Luis Pérez Romasanta, de la Unidad de Oncología de Radiación de la 
+Universidad de Salamanca, y de Estanislao Arana, de la Unidad de Radiología del Instituto Valenciano de Oncología, 
+quienes concretaron la idea principal en términos de las problemáticas de sus especialidades
+(Figura \ref{publica}). 
+La sala del Palau de les Arts estaba al completo y las numerosas preguntas de los asistentes
+subrayaron el gran interés que el evento había suscitado. 
+Victor M. Pérez-García es director del Laboratorio de Oncología Matemática y miembro 
+del Instituto de Matemática Aplicada a la Ciencia y la Ingeniería, ambos de la Universidad de Castilla-La Mancha.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{20190718_210754-public-lecture.png}
+\vspace{-12pt}
+\caption{\footnotesize Conferencia pública. % de  (derecha). 
+Izquierda: Francisco Arándiga, José Antonio Carrillo, Luis Pérez Romasanta, Estanislao Arana, Victor M. Pérez-García, Rosa Donat
+y Tomás Chacón. Derecha: Victor M. Pérez-García.
+Fotos de SXD.\label{publica}
+}
+\end{figure}
+
+
+
+
+Vuelvo al tema del minisimposio.
+Las dos últimas contribuciones fueron conjuntas con Eduardo Ulises Moya y se pueden encontrar en
+
+\noindent{\small
+\qquad M7: \url{https://mat-web.upc.edu/people/sebastia.xambo/ICIAM2019/GC&DL-07.pdf}
+
+\noindent
+\qquad M8: \url{https://mat-web.upc.edu/people/sebastia.xambo/ICIAM2019/GC&DL-08.pdf}
+}
+
+\noindent
+La presentación M8 tiene dos partes, A y B. La parte A quiere ser una sinopsis de lo que es el aprendizaje 
+algorítmico usual mientras que la B explora las posibilidades que se presentan cuando los números reales
+son substituidos por los números complejos, o por los cuaterniones de Hamilton, o por otras álgebras 
+que han demostrado su eficacia en otros terrenos, como por ejemplo la física matemática, la robótica, 
+o la geometría molecular (v. 
+
+{\small
+\quad\ M1:
+\url{https://mat-web.upc.edu/people/sebastia.xambo/ICIAM2019/GC&DL-01.pdf} 
+
+\noindent y las referencias que allí se indican).
+
+Para el futuro inmediato, la previsión es publicar un volumen en la colección SEMA-SIMAI de Springer
+con capítulos correspondientes a los del minisimposio junto con unos pocos capítulos de otros investigadores
+que no pudieron asistir al Congreso y que reforzarán el valor pluridisciplinar de las líneas de trabajo
+que se sugieren. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{20190715_084237-MJE-SX+msspeakers-x.png}
+\vspace{-12pt}
+\caption{\footnotesize María Jesús Esteban con el autor. Sardan Lazendic, Eduardo Ulises Moya y Carlile Lavor. 
+Salvatore Vitabile (foto de SL). Isiah Zaplana
+en su conferencia en el minsimposio. Fotos de SXD.}
+\end{figure}
+
+Terminamos con una de las imágenes mostradas al final de la conferencia pública de Victor M. Pérez-García,
+pues resulta agradable pensar que se puede aplicar a nuestros sueños.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{IMG_2005-JulesVerne.jpg}
+\vspace{-12pt}
+\caption{\footnotesize Cualquier cosa que uno pueda imaginar, otros pueden hacerla realidad. Foto de SXD.}
+\end{figure}
+
+
+\end{document}
+
