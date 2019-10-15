@@ -408,7 +408,7 @@ img {
 .ecss-0900{ font-family: sans-serif;}
 .callig-15x-x-199{font-size:298%;}
 .callig-15x-x-165{font-size:247%;}
-.small-caps{font-size:66%; }
+.small-caps{font-size:66%; color:"red"}
 .letra-figura{font-size:66%; }
 p.noindent { text-indent: 0em }
 td p.noindent { text-indent: 0em; margin-top:0em; }
