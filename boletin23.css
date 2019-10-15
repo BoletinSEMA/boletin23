@@ -1,4 +1,12 @@
- 
+/* 15/10/19: Añado estilo para que las imágenes aparezcan centradas,
+https://www.w3schools.com/howto/howto_css_image_center.asp
+*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* start css.sty */
 .cmr-5{font-size:50%;}
 .cmr-7{font-size:70%;}
@@ -476,7 +484,7 @@ div.figure img {text-align:center;}
 .marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
 table.equation {width:100%;}
 .equation td{text-align:center; }
-td.equation { margin-top:1em; margin-bottom:1em; } 
+td.equation { margin-top:1em; margin-bottom:1em; }
 td.equation-label { width:5%; text-align:center; }
 td.eqnarray4 { width:5%; white-space: normal; }
 td.eqnarray2 { width:5%; }
@@ -530,8 +538,8 @@ div.abstract {width:100%;}
 .subsectionToc, .likesubsectionToc {margin-left:2em;}
 .subsubsectionToc, .likesubsubsectionToc {margin-left:4em;}
 .caption span.id{font-weight: bold;}
- .wrapfig-r, .wrapfig-ri, .wrapfig-ir, .wrapfig-ro, .wrapfig-or {float:right; text-align:left; margin-left:auto; margin-top:0.5em;} 
- .wrapfig-l, .wrapfig-li, .wrapfig-il, .wrapfig-lo, .wrapfig-ol {float:left; text-align:left; margin-right:auto; margin-top:0.5em;} 
+ .wrapfig-r, .wrapfig-ri, .wrapfig-ir, .wrapfig-ro, .wrapfig-or {float:right; text-align:left; margin-left:auto; margin-top:0.5em;}
+ .wrapfig-l, .wrapfig-li, .wrapfig-il, .wrapfig-lo, .wrapfig-ol {float:left; text-align:left; margin-right:auto; margin-top:0.5em;}
 .wrapfig-r .caption td.content, .wrapfig-ri .caption td.content, .wrapfig-ir .caption td.content, .wrapfig-ro .caption td.content, .wrapfig-or .caption td.content, .wrapfig-l .caption td.content, .wrapfig-li .caption td.content, .wrapfig-il .caption td.content, .wrapfig-lo .caption td.content, .wrapfig-ol .caption td.content {white-space: normal; }
 .wrapfig-r .caption, .wrapfig-ri .caption, .wrapfig-ir .caption, .wrapfig-ro .caption, .wrapfig-or .caption, .wrapfig-l .caption, .wrapfig-li .caption, .wrapfig-il .caption, .wrapfig-lo .caption, .wrapfig-ol .caption {width:30%; }
 dd.enumerate {margin-left: 2em;}
@@ -552,9 +560,9 @@ div.gather-star {text-align:center;}
 .figure img.graphics {margin-left:10%;}
 .subfigure{display: inline-block;max-width:30%;}
 .subfigure img{display:block; margin-left:auto;margin-right:auto;}
- .foreignobject {line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:120\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXgeneral,Times,Symbol,cmr10,CMSY10,CMEX10;padding:0; margin:0; text-align:center; } 
+ .foreignobject {line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:120\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXgeneral,Times,Symbol,cmr10,CMSY10,CMEX10;padding:0; margin:0; text-align:center; }
 math {vertical-align:baseline; line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXGeneral,Times,Symbol, cmr10,cmsy10,cmex10,cmmi10; font-style: normal; margin:0; padding:0; }
- .foreignobject {line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:120\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXgeneral,Times,Symbol,cmr10,CMSY10,CMEX10;padding:0; margin:0; text-align:center; } 
+ .foreignobject {line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:120\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXgeneral,Times,Symbol,cmr10,CMSY10,CMEX10;padding:0; margin:0; text-align:center; }
 math {vertical-align:baseline; line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXGeneral,Times,Symbol, cmr10,cmsy10,cmex10,cmmi10; font-style: normal; margin:0; padding:0; }
 #TBL-5 colgroup{border-left: 1px solid black;border-right:1px solid black;}
 #TBL-5{border-collapse:collapse;}
@@ -570,9 +578,8 @@ span#textcolor1{color:#0000FF}
 span#textcolor1{color:#FF00FF}
 span#textcolor2{color:#0000FF}
 span#textcolor2{color:#FF00FF}
- .foreignobject {line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:120\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXgeneral,Times,Symbol,cmr10,CMSY10,CMEX10;padding:0; margin:0; text-align:center; } 
+ .foreignobject {line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:120\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXgeneral,Times,Symbol,cmr10,CMSY10,CMEX10;padding:0; margin:0; text-align:center; }
 math {vertical-align:baseline; line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXGeneral,Times,Symbol, cmr10,cmsy10,cmex10,cmmi10; font-style: normal; margin:0; padding:0; }
- .foreignobject {line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:120\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXgeneral,Times,Symbol,cmr10,CMSY10,CMEX10;padding:0; margin:0; text-align:center; } 
+ .foreignobject {line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:120\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXgeneral,Times,Symbol,cmr10,CMSY10,CMEX10;padding:0; margin:0; text-align:center; }
 math {vertical-align:baseline; line-height:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-size:100\protect \unskip $\mathsurround \z@ \protect \kern +.1667em\relax $%{}; font-family:STIXGeneral,Times,Symbol, cmr10,cmsy10,cmex10,cmmi10; font-style: normal; margin:0; padding:0; }
 /* end css.sty */
-
