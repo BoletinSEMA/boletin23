@@ -523,7 +523,7 @@ table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 div.array {text-align:center;}
 .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
 .index-item, .index-subitem, .index-subsubitem {display:block}
-div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+div.caption {margin-left: auto; margin-right: auto; text-align:center;}
 div.caption span.id{font-weight: bold; white-space: nowrap; }
 h1.partHead{text-align: center}
 p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
@@ -542,6 +542,7 @@ div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
 div.abstract {width:100%;}
 .subsectionToc, .likesubsectionToc {margin-left:2em;}
 .subsubsectionToc, .likesubsubsectionToc {margin-left:4em;}
+.likesubsubsectionHead{color:blue;}
 .caption span.id{font-weight: bold;}
  .wrapfig-r, .wrapfig-ri, .wrapfig-ir, .wrapfig-ro, .wrapfig-or {float:right; text-align:left; margin-left:auto; margin-top:0.5em;}
  .wrapfig-l, .wrapfig-li, .wrapfig-il, .wrapfig-lo, .wrapfig-ol {float:left; text-align:left; margin-right:auto; margin-top:0.5em;}
