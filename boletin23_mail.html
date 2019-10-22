@@ -11,30 +11,74 @@
   </head>
 
     <!-- SIDEBAR -->
-    <div w3-include-html="sidebar.html"></div>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;padding-top:0px" id="mySidebar"><br>
+  <div class="w3-container">
+    <!-- <a href="https://www.sema.org.es/"><img src="https://www.sema.org.es/images/boletines/boletin21/img/sema-logo-Paco.png" style="width:45%;" class="w3-round-small"></a><br> -->
+    <a href="https://www.sema.org.es/"><img src="https://www.sema.org.es/images/boletines/boletin23/img/logosema.png" style="width:82%;padding:0px"></a>
+    <br/>
+    <a href="https://www.sema.org.es/images/boletines/boletin23/23/img/portada_boletin.png"><img src="https://www.sema.org.es/images/boletines/boletin23/23/img/portada_boletin.png" style="width:80%; height:50%"></a>
+    </p>
+    <!-- <h4><b>Índice</b></h4> -->
+  </div>
+  <div class="w3-bar-block">
+    <a href="https://www.sema.org.es/images/boletines/boletin23/23/index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-th-large fa-fw w3-margin-right"></i>Portada</a>
+    <a href="https://www.sema.org.es/images/boletines/boletin23/23/editorial.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-th-large fa-fw w3-margin-right"></i>Editorial</a>
+    <a href="https://www.sema.org.es/images/boletines/boletin23/23/institucionales.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-th-large fa-fw w3-margin-right"></i>Socios Institucionales</a>
+    <a href="https://www.sema.org.es/images/boletines/boletin23/23/hacerse_socio.html" onclick="w3_close()" class="w3-bar-item
+    w3-button w3-padding "><i class="fa fa-th-large fa-fw
+    w3-margin-right"></i>Hacerse socio de la SEMA</a>
+    <a href="https://www.sema.org.es/images/boletines/boletin23/23/index.html#contacto" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Contacto</a>
+    <p>
+    </p>
+  </div>
+  <div class="w3-container">
+    <p>
+    <a href="https://www.sema.org.es/images/boletines/boletin23/23/img/contraportada.pdf">
+    <img src="https://www.sema.org.es/images/boletines/boletin23/23/img/contraportada_boletin.png" style="width:80%; height:50%" class="w3-round"/></a>
+    </p>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
     <!-- !PAGE CONTENT! -->
     <div class="w3-main" style="margin-left:300px">
 
       <!-- HEADER -->
-      <div w3-include-html="header.html"></div>
+<!-- Header -->
+<header id="portfolio">
+  <a href="#"><img src="https://boletinsema.github.io/boletin23/img/logosema.png" style="width:100px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+  <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+  <div class="w3-container" style="padding-bottom:2px">
+    <!-- <a href="index.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/img/boletin_sema.png" style="width:60%; padding-top:30px;" class="w3-round-small"></a> -->
+    <a href="https://www.sema.org.es/images/boletines/boletin23/23/index.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/img/boletin_sema.png" style="width:60%; padding-top:30px;" class="w3-round-small"></a>
+    <h2>Número 23, octubre 2019</h2>
+    <div style="text-align:right" class="w3-topbar">
+      <!-- <span class="w3-margin-right">Números anteriores</span> -->
+      <a class="w3-button" style="font-size:small" href="https://www.sema.org.es/images/site/boletines/BoletinElectronicoSEMA23.pdf">Descargar PDF Boletín 23 (205Mb)</a>
+      <a class="w3-button" style="font-size:small " href="https://www.sema.org.es/es/publicaciones/boletin-electronico-sema">Números anteriores</button>
+    </div>
+  </div>
+</header>
 
       <!-- BODY -->
       <div class="w3-row-padding">
 
 	<!-- 0. ····························································· -->
 	<div class="w3-third w3-container w3-margin-bottom">
-	  <a href="palabras_presidenta.html"><img src="https://www.sema.org.es/images/boletines/boletin22/22/img/RosaDonat-peque.jpg" style="width:100%" class="w3-hover-opacity"></a>
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/palabras_presidenta.html"><img src="https://www.sema.org.es/images/boletines/boletin22/22/img/RosaDonat-peque.jpg" style="width:100%" class="w3-hover-opacity"></a>
 	  <div class="w3-container w3-white">
-	    <p><b><a href="palabras_presidenta.html">Palabras de la presidenta</a></b></p>
+	    <p><b><a href="https://www.sema.org.es/images/boletines/boletin23/23/palabras_presidenta.html">Palabras de la presidenta</a></b></p>
 	    <p style="font-style:italic">Rosa M. Donat Beneito</p>
 	  </div>
 	</div>
 	<!-- 1. ····························································· -->
 	<div class="w3-third w3-container w3-margin-bottom">
-	  <a href="sec1.html"><img src="figuras/iciam-small.png" style="width:100%" class="w3-hover-opacity"></a>
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/sec1.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/figuras/iciam-small.png" style="width:100%" class="w3-hover-opacity"></a>
 	  <div class="w3-container w3-white">
-	    <p><b><a href="sec1.html">ICIAM 2019</a></b></p>
+	    <p><b><a href="https://www.sema.org.es/images/boletines/boletin23/23/sec1.html">ICIAM 2019</a></b></p>
 	    <p >Valencia, 15 al 19 de julio de 2019</p>
 	    <p style="font-style:italic">
 	     María Jesús Esteban, Sebastià Xambó Descamps,
@@ -45,9 +89,9 @@
 	</div>
 	<!-- 2. ····························································· -->
 	<div class="w3-third w3-container w3-margin-bottom">
-	  <a href="sec2.html"><img src="figuras/efc-small.png" style="width:100%" class="w3-hover-opacity"></a>
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/sec2.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/figuras/efc-small.png" style="width:100%" class="w3-hover-opacity"></a>
 	  <div class="w3-container w3-white">
-	    <p><b><a href="sec2.html">Jornadas MaDeTeSoH: Las Matemáticas en el Desarrollo
+	    <p><b><a href="https://www.sema.org.es/images/boletines/boletin23/23/sec2.html">Jornadas MaDeTeSoH: Las Matemáticas en el Desarrollo
 Tecnológico de la Sociedad de Hoy </a></b></p>
 	    <p style="font-style:italic">Elena Vázquez Cendón</p>
 	  </div>
@@ -60,25 +104,25 @@ Tecnológico de la Sociedad de Hoy </a></b></p>
 
 	<!-- 3. ····························································· -->
 	<div class="w3-third w3-container">
-	  <a href="sec3.html"><img src="figuras/NumHyp2019_small.png" style="width:100%" class="w3-hover-opacity"></a>
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/sec3.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/figuras/NumHyp2019_small.png" style="width:100%" class="w3-hover-opacity"></a>
 	  <div class="w3-container w3-white">
-	    <p><b><a href="sec3.html">Numerical Methods for Hyperbolic Problems</a></b></p>
+	    <p><b><a href="https://www.sema.org.es/images/boletines/boletin23/23/sec3.html">Numerical Methods for Hyperbolic Problems</a></b></p>
 	    <p style="font-style:italic">María Luz Muñoz Ruiz<br/>Carlos Parés Madroña</p>
 	  </div>
 	</div>
 	<!-- 4. ····························································· -->
 	<div class="w3-third w3-container w3-margin-bottom">
-	  <a href="sec4.html"><img src="figuras/Steffensen_small.png" style="width:100%" class="w3-hover-opacity"></a>
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/sec4.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/figuras/Steffensen_small.png" style="width:100%" class="w3-hover-opacity"></a>
 	  <div class="w3-container w3-white">
-	    <p><b><a href="sec4.html">International Congress on Actuarial Science and Quantitative Finance–ICASQF2019</a></b></p>
+	    <p><b><a href="https://www.sema.org.es/images/boletines/boletin23/23/sec4.html">International Congress on Actuarial Science and Quantitative Finance–ICASQF2019</a></b></p>
 	    <p style="font-style:italic">Jaime Alberto Londoño Londoño</p>
 	  </div>
 	</div>
 	<!-- 5. ····························································· -->
 	<div class="w3-third w3-container w3-margin-bottom">
-	  <a href="sec5.html"><img src="figuras/simai30-logo.png" style="width:100%" class="w3-hover-opacity"></a>
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/sec5.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/figuras/simai30-logo.png" style="width:100%" class="w3-hover-opacity"></a>
 	  <div class="w3-container w3-white">
-	    <p><b><a href="sec5.html">30 Years of SIMAI: status and perspectives of applied and industrial mathematics in Italy and in Europe</a></b></p>
+	    <p><b><a href="https://www.sema.org.es/images/boletines/boletin23/23/sec5.html">30 Years of SIMAI: status and perspectives of applied and industrial mathematics in Italy and in Europe</a></b></p>
 	    <p style="font-style:italic">Luca Formaggia<br/>President of SIMAI</p>
 	  </div>
 	</div>
@@ -90,26 +134,26 @@ Tecnológico de la Sociedad de Hoy </a></b></p>
 
 	<!-- 6. ····························································· -->
 	<div class="w3-third w3-container w3-margin-bottom">
-	  <a href="sec6.html"><img src="figuras/InTimeLogo_small.jpg" style="width:100%" class="w3-hover-opacity"></a>
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/sec6.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/figuras/InTimeLogo_small.jpg" style="width:100%" class="w3-hover-opacity"></a>
 	  <div class="w3-container w3-white">
-	    <p><b><a href="sec6.html">The In-Situ Instrument for Mars and Earth Dating Applications (IN-TIME) project</a></b></p>
+	    <p><b><a href="https://www.sema.org.es/images/boletines/boletin23/23/sec6.html">The In-Situ Instrument for Mars and Earth Dating Applications (IN-TIME) project</a></b></p>
 	    <p style="font-style:italic">Luis Vázquez, José Luis Vázquez-Poletti, Mariano Sastre, Lara Quitián, María Luisa Martín, Francisco Valero, Ignacio M. Llorente, Alessio di Iorio</p>
 	  </div>
 	</div>
 	<!-- 7. ····························································· -->
 	<div class="w3-third w3-container w3-margin-bottom">
-	  <a href="sec7.html"><img src="figuras/Nicolson_et_Taussky-Todd.png" style="width:100%" class="w3-hover-opacity"></a>
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/sec7.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/figuras/Nicolson_et_Taussky-Todd.png" style="width:100%" class="w3-hover-opacity"></a>
 	  <div class="w3-container w3-white">
-	    <p><b><a href="sec7.html">Phyllis Nicolson y Olga Taussky-Todd, dos mujeres
+	    <p><b><a href="https://www.sema.org.es/images/boletines/boletin23/23/sec7.html">Phyllis Nicolson y Olga Taussky-Todd, dos mujeres
 matemáticas del siglo XX</a></b></p>
 	    <p style="font-style:italic">Francisco Ortegón Gallego</p>
 	  </div>
 	</div>
 	<!-- 8. ····························································· -->
 	<div class="w3-third w3-container w3-margin-bottom">
-	  <a href="SEMAJournal.html"><img src="https://www.sema.org.es/images/boletines/boletin22/22/img/sema-journal.jpg" style="width:100%" class="w3-hover-opacity"></a>
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/SEMAJournal.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/https://www.sema.org.es/images/boletines/boletin22/22/img/sema-journal.jpg" style="width:100%" class="w3-hover-opacity"></a>
 	  <div class="w3-container w3-white">
-	    <p><b><a href="SEMAJournal.html">SEMA Journal</a></b></p>
+	    <p><b><a href="https://www.sema.org.es/images/boletines/boletin23/23/SEMAJournal.html">SEMA Journal</a></b></p>
 	    <p style="font-style:italic"></p>
 	  </div>
 	</div>
@@ -121,19 +165,19 @@ matemáticas del siglo XX</a></b></p>
 
 	<!-- 9. ····························································· -->
 	<div class="w3-third w3-container">
-	  <a href="Noticias.html"><img src="figuras/noticias.png"
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/Noticias.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/figuras/noticias.png"
 				       style="width:100%" class="w3-hover-opacity"></a>
 	  <div class="w3-container w3-white">
-	    <p><b><a href="Noticias.html">Noticias</a></b></p>
+	    <p><b><a href="https://www.sema.org.es/images/boletines/boletin23/23/Noticias.html">Noticias</a></b></p>
 	    <p style="font-style:italic"></p>
 	  </div>
 	</div>
 	<!-- 10. ···························································· -->
 	<div class="w3-third w3-container w3-margin-bottom">
-	  <a href="anuncios.html"><img src="figuras/anuncios.png"
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/anuncios.html"><img src="https://www.sema.org.es/images/boletines/boletin23/23/figuras/anuncios.png"
 	       style="width:100%" class="w3-hover-opacity"></a>
 	  <div class="w3-container w3-white">
-	    <p><b><a href="Anuncios.html">Anuncios</a></b></p>
+	    <p><b><a href="https://www.sema.org.es/images/boletines/boletin23/23/Anuncios.html">Anuncios</a></b></p>
 	    <p style="font-style:italic"></p>
 	  </div>
 	</div>
@@ -212,7 +256,7 @@ matemáticas del siglo XX</a></b></p>
 	    favor, <a href="mailto:boletin@sema.org.es">contacte con
 	    nosotros</a> <p/>
 	  <h5>Hacerse socio</h5>
-	  <a href="hacerse_socio.html">Hacerse socio de la SEMA es
+	  <a href="https://www.sema.org.es/images/boletines/boletin23/23/hacerse_socio.html">Hacerse socio de la SEMA es
 	    muy sencillo, y barato. Más detalles aquí...
 	</div>
 
